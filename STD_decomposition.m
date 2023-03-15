@@ -30,7 +30,7 @@ q = repmat(ym,n,1);
 T = q(:)'; 
 
 %dispersion
-yd = std(yy)*n^0.5; 
+yd = (sum((yy-q).^2)).^0.5;
 q = repmat(yd,n,1); 
 D = q(:)'; 
 
